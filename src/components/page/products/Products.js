@@ -26,7 +26,6 @@ const Products = () => {
   
   return (
     <div>
-      <Featured />
       
       <Box className="text-field">
         <SearchIcon />

@@ -23,8 +23,17 @@
       font-size: 20px;
   }
 
-  .btn--outline {
+  .btn-outline {
+    width: 250px;
+    font-weight: 500;
+    font-size: 20px;
     cursor: pointer;
+    padding: 5px;
+    color: #000;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    font-family: 'Outfit', sans-serif;
+
   }
 
   .footer-input {

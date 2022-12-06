@@ -8,7 +8,7 @@
 
 .text-field {
     display: flex;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left: 10%;
     align-items: center;
 }
@@ -55,8 +55,26 @@ a {
     }
     .product {
         max-width: 200px;
+        min-height: 250px;
     }
     .productimg {
         width: 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .product {
+        max-width: 150px;
+    }
+
+    .products {
+        gap: 20px;
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .product {
+        max-width: 125px;
     }
 }

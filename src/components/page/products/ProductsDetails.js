@@ -1,5 +1,5 @@
-import axios from 'axios';
 import { Box } from '@mui/system';
+import { axiosInstance } from '../../../config'
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Button, FormLabel, TextField, FormControlLabel, Checkbox } from '@mui/material';
@@ -10,8 +10,8 @@ const BookDetail = () => {
     const id = useParams().id;
     useEffect(() => {
         const fetchHandler = async () => {
-            await axios
-            .get(`http://localhost:5000/books/${id}`)
+            await axiosInstance
+            .get(`/books/${id}`)
             .then((res)=> res.data)
             .then(data => setInputs(data.book));
         };
@@ -20,7 +20,7 @@ const BookDetail = () => {
     const [checked, setChecked] = useState(false);
 
     const sendRequest = async () => {
-      axios.put(`http://localhost:5000/books/${id}`, {
+      axiosInstance.put(`/books/${id}`, {
         name: String(inputs.name),
         author: String(inputs.author),
         description: String(inputs.description),

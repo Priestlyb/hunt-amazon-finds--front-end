@@ -33,7 +33,7 @@ function Footer() {
               type='email'
               placeholder='Your Email'
             />
-            <button className='btn--outline'>Subscribe</button>
+            <button className='btn-outline'>Subscribe</button>
             {done && "Sent Successful... 24hrs to reply, if Urgent, Contact me on my Socials"}
         </form>
       </section>

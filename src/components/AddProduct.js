@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button, FormLabel, TextField, FormControlLabel, Checkbox } from '@mui/material';
-import axios from "axios";
+import {axiosInstance} from "../config";
 import { Box } from '@mui/system';
 import { useNavigate } from "react-router-dom";
 
@@ -24,7 +24,7 @@ const AddBook = () => {
 //  console.log(e.target.name, "value", e.target.value);
   };
   const sendRequest = async () => {
-    axios.post("http://localhost:5000/books", {
+    axiosInstance.post("http://localhost:5000/books", {
       name: String(inputs.name),
       author: String(inputs.author),
       description: String(inputs.description),
